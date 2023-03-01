@@ -1,0 +1,17 @@
+.card {
+  margin: auto;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px gray solid;
+  border-radius: 2em;
+  width: 25em;
+}
+img {
+  object-fit: cover;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  width: 20em;
+  height: 18em;
+}

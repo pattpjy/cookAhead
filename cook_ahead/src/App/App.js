@@ -1,52 +1,53 @@
 import React, { useState } from "react";
-import Card from "../Card/Card";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "../LandingPage/LandingPage";
+import randomRecipesData from "../APICall/dummyData";
+import WeeklyPlan from "../WeeklyDisplay/WeeklyPlan";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const App = () => {
-  const [recipes, setRecipes] = useState("");
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "3174349b86msh3f56cf93786160ep1bcf87jsn6808a68eebaf",
-      "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    },
+  const [recipes, setRecipes] = useState([]);
+  const [savedRecipes, setSavedRecipes] = useState([]);
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+  //     "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+  //   },
+  // };
+
+  // // const URL = "https://random.dog/woof.json";
+  // const getRandomRecipes = async () => {
+  //   const response = await fetch(
+  //     "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=4",
+  //     options
+  //   );
+  //   const body = await response.json();
+  //   return setRecipes(body.recipes);
+  // };
+  const getRandomRecipes = () => {
+    return setRecipes(randomRecipesData.recipes);
   };
 
-  // const URL = "https://random.dog/woof.json";
-  const getRandomRecipes = async () => {
-    const response = await fetch(
-      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=4",
-      options
-    );
-    const body = await response.json();
-    console.log(body.recipes);
-    return setRecipes(body.recipes);
-  };
-  const onClickHandler = () => {
-    getRandomRecipes();
-    // console.log(getUrl);
-    // setUrl(getUrl);
-  };
-
-  const displayCard = () => {
-    const showRecipes = recipes.map((recipe) => {
-      return (
-        <Card
-          cardTitle={recipe.title}
-          cardImg={recipe.image}
-          id={recipe.id}
-          key={recipe.id}
-        />
-      );
-    });
-    return showRecipes;
-  };
   return (
-    <div className="App">
-      <div className="main-board">
-        <button onClick={onClickHandler}> Click me </button>
-      </div>
-      {displayCard()}
-    </div>
+    <main>
+      <Routes>
+        <Route
+          className="App"
+          path="/"
+          element={
+            <LandingPage
+              getRandomRecipes={getRandomRecipes}
+              randomRecipes={recipes}
+              savedRecipes={savedRecipes}
+              setSavedRecipes={setSavedRecipes}
+            />
+          }
+        />
+        <Route path="/weekly-plan" element={<WeeklyPlan />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </main>
   );
 };
 
