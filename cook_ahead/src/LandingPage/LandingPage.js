@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 const LandingPage = ({
   getRandomRecipes,
@@ -7,6 +8,7 @@ const LandingPage = ({
   savedRecipes,
   setSavedRecipes,
 }) => {
+  let navigate = useNavigate();
   const onClickHandler = () => {
     getRandomRecipes();
     // console.log(getUrl);
@@ -34,7 +36,12 @@ const LandingPage = ({
       <div className="main-board">
         <button onClick={onClickHandler}> Get Meal Ideas </button>
         <div className="display-random">{displayCard()}</div>
-        <button className="view-weekly"> See My Weekly Meals</button>
+        <button
+          className="view-weekly"
+          onClick={() => navigate("/weekly-plan")}
+        >
+          See My Weekly Meals
+        </button>
       </div>
     </div>
   );

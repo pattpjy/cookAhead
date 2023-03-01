@@ -44,7 +44,10 @@ const App = () => {
             />
           }
         />
-        <Route path="/weekly-plan" element={<WeeklyPlan />} />
+        <Route
+          path="/weekly-plan"
+          element={<WeeklyPlan savedRecipes={savedRecipes} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </main>
