@@ -1,0 +1,4 @@
+.weekly-display {
+  display: flex;
+  flex-direction: column;
+}
