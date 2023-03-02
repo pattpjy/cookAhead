@@ -3,8 +3,6 @@ describe("Weekly meal plan page", () => {
     cy.visit("http://localhost:3000/weekly-plan");
   });
   describe("", () => {
-    it("passes", () => {
-      cy.visit("/weekly-plan");
-    });
+    it("passes", () => {});
   });
 });

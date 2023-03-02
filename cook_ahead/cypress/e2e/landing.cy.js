@@ -30,7 +30,8 @@ describe("Landing Page", () => {
       //button for add to planner
     });
     it("should have correct link in the weekly meal plan button", () => {
-      cy.visit("https://example.cypress.io");
+      cy.get(".view-weekly").click();
+      cy.url().should("include", "/weekly-plan");
     });
   });
 });
