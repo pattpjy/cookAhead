@@ -14,7 +14,6 @@ const Card = ({
     if (foundRecipe) {
       console.log("Adding to weekly");
       setSavedRecipes((prevState) => [...prevState, foundRecipe]);
-      return console.log(savedRecipes);
     } else {
       return console.log("Nope");
     }
