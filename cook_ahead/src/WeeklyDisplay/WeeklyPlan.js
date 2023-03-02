@@ -1,11 +1,17 @@
 import WeeklyCard from "../WeeklyCard/WeeklyCard";
-const WeeklyPlan = ({ savedRecipes }) => {
+const WeeklyPlan = ({ savedRecipes, setSavedRecipes }) => {
   const displayCard = () => {
     const showRecipes = savedRecipes.map((recipe, index) => {
       return (
-        <div key={index}>
-          <p>{recipe.title}</p>;
-        </div>
+        <WeeklyCard
+          key={index}
+          id={recipe.id}
+          title={recipe.title}
+          imageURL={recipe.image}
+          instruction={recipe.instruction}
+          savedRecipes={savedRecipes}
+          setSavedRecipes={setSavedRecipes}
+        />
       );
     });
     return showRecipes;

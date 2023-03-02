@@ -8,15 +8,16 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
-  //     "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-  //   },
-  // };
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+      "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+    },
+  };
 
-  // // const URL = "https://random.dog/woof.json";
+  console.log("options", options);
+  // const URL = "https://random.dog/woof.json";
   // const getRandomRecipes = async () => {
   //   const response = await fetch(
   //     "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=4",
@@ -46,7 +47,12 @@ const App = () => {
         />
         <Route
           path="/weekly-plan"
-          element={<WeeklyPlan savedRecipes={savedRecipes} />}
+          element={
+            <WeeklyPlan
+              savedRecipes={savedRecipes}
+              setSavedRecipes={setSavedRecipes}
+            />
+          }
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
