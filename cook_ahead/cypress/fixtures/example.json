@@ -1,5 +1,10 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "recipes": [
+    {
+      "id": 55617,
+      "title": "Ramen Chicken Noodle",
+      "image": "https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFtZW58ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "instructions": "Heat the oil in a medium (10-inch) heavy-bottomed pot or Dutch oven, such as Le Creuset, over medium-low heat. Add the onion and sauté for 6 to 8 minutes, until tender. Add the carrots and sauté for 5 minutes. Add the ginger and garlic and sauté for one minute. Add the chicken stock, bring to a boil, lower the heat, and simmer for 10 minutes."
+    }
+  ]
 }
