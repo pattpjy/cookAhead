@@ -11,16 +11,17 @@ const WeeklyCard = ({
 }) => {
   const onDeleteIdea = (id) => {
     const deleted = savedRecipes.filter((recipe) => recipe.id !== id);
-    console.log("im deleting!!", deleted);
-
     return setSavedRecipes(deleted);
   };
 
   return (
-    <div>
-      <p>{title}</p>
+    <div className="weekly-card">
+      <section>
+        <p>{title}</p>
+        <p>{instruction}</p>
+      </section>
       <img src={imageURL} alt="title"></img>
-      <p>{instruction}</p>
+
       <button
         className="fa-light fa-xmark"
         onClick={() => onDeleteIdea(id)}

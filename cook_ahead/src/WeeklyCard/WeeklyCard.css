@@ -1,0 +1,17 @@
+.weekly-card {
+  margin: 2em 0 2em 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px gray solid;
+  border-radius: 2em;
+  width: 35em;
+}
+
+img {
+  object-fit: cover;
+  padding: 2em;
+  width: 10em;
+  height: 8em;
+}
