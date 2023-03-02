@@ -8,15 +8,13 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
-      "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    },
-  };
-
-  console.log("options", options);
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+  //     "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+  //   },
+  // };
   // const URL = "https://random.dog/woof.json";
   // const getRandomRecipes = async () => {
   //   const response = await fetch(

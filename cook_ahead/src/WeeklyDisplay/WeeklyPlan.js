@@ -1,4 +1,5 @@
 import WeeklyCard from "../WeeklyCard/WeeklyCard";
+import "./WeeklyPlan.css";
 const WeeklyPlan = ({ savedRecipes, setSavedRecipes }) => {
   const displayCard = () => {
     const showRecipes = savedRecipes.map((recipe, index) => {
@@ -8,7 +9,7 @@ const WeeklyPlan = ({ savedRecipes, setSavedRecipes }) => {
           id={recipe.id}
           title={recipe.title}
           imageURL={recipe.image}
-          instruction={recipe.instruction}
+          instruction={recipe.instructions}
           savedRecipes={savedRecipes}
           setSavedRecipes={setSavedRecipes}
         />
@@ -17,7 +18,7 @@ const WeeklyPlan = ({ savedRecipes, setSavedRecipes }) => {
     return showRecipes;
   };
   return (
-    <div>
+    <div className="weekly-display">
       <h2>Weekly Meal Plan</h2>
       <div className="display-saved">{displayCard()}</div>
     </div>
