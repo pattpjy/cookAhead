@@ -25,11 +25,10 @@ const LandingPage = ({
           cardTitle={recipe.title}
           cardImg={recipe.image}
           randomRecipes={randomRecipes}
+          savedBTN={recipe.saved}
           setRecipes={setRecipes}
           savedRecipes={savedRecipes}
           setSavedRecipes={setSavedRecipes}
-          savedBTN={savedBTN}
-          setSavedBTN={setSavedBTN}
           id={recipe.id}
           key={recipe.id}
         />
