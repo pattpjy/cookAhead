@@ -8,6 +8,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
+  const [savedBTN, setSavedBTN] = useState(false);
   // const options = {
   //   method: "GET",
   //   headers: {
@@ -38,8 +39,11 @@ const App = () => {
             <LandingPage
               getRandomRecipes={getRandomRecipes}
               randomRecipes={recipes}
+              setRecipes={setRecipes}
               savedRecipes={savedRecipes}
               setSavedRecipes={setSavedRecipes}
+              savedBTN={savedBTN}
+              setSavedBTN={setSavedBTN}
             />
           }
         />

@@ -4,15 +4,25 @@ const Card = ({
   cardTitle,
   cardImg,
   randomRecipes,
+  setRecipes,
   savedRecipes,
+  savedBTN,
   setSavedRecipes,
+  setSavedBTN,
   id,
 }) => {
   //function to add  saved recipes to state
   const addToWeeklyPlanner = (recID) => {
     const foundRecipe = randomRecipes.find((recipe) => recipe.id === recID);
-    if (foundRecipe) {
+
+    const checkDup = savedRecipes.find(
+      (recipe) => foundRecipe.id === recipe.id
+    );
+    // (recipe) => recipe.id !== foundRecipe.id
+    if (!checkDup) {
       console.log("Adding to weekly");
+      // setRecipes({ saved: true });
+      foundRecipe["saved"] = true;
       setSavedRecipes((prevState) => [...prevState, foundRecipe]);
     } else {
       return console.log("Nope");
@@ -20,13 +30,37 @@ const Card = ({
   };
   const onClickHandler = () => {
     addToWeeklyPlanner(id);
+    //   setSavedBTN(false);
+    // } else {
+    //   setSavedBTN(true);
+    // }
   };
   return (
     <div className="card">
       <h3>{cardTitle}</h3>
       <img src={cardImg} alt=""></img>
+
       <button onClick={onClickHandler}>Add to planner</button>
     </div>
   );
 };
 export default Card;
+
+// const checkSavedRecipes = () => {
+//   // if id match id in saved array : prompt  you save it msg, if not add to the saved array
+// };
+
+// // const removeFromSavedActivities = (grabbedId) =>{
+// //   const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
+// //   setSavedActivities(unbookMarked);
+// //   }
+
+// const onClickHandler = (id) => {
+//   addToWeeklyPlanner(id);
+
+//   // if (savedBTN === true) {
+//   //   setSavedBTN(false);
+//   // } else {
+//   //   setSavedBTN(true);
+//   // }
+// };

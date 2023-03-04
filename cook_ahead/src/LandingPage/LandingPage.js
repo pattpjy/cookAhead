@@ -5,8 +5,11 @@ import "./LandingPage.css";
 const LandingPage = ({
   getRandomRecipes,
   randomRecipes,
+  setRecipes,
   savedRecipes,
   setSavedRecipes,
+  savedBTN,
+  setSavedBTN,
 }) => {
   let navigate = useNavigate();
   const onClickHandler = () => {
@@ -22,8 +25,11 @@ const LandingPage = ({
           cardTitle={recipe.title}
           cardImg={recipe.image}
           randomRecipes={randomRecipes}
+          setRecipes={setRecipes}
           savedRecipes={savedRecipes}
           setSavedRecipes={setSavedRecipes}
+          savedBTN={savedBTN}
+          setSavedBTN={setSavedBTN}
           id={recipe.id}
           key={recipe.id}
         />
