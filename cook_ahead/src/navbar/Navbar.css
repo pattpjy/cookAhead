@@ -1,0 +1,11 @@
+.invis-button {
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+  color: black;
+}
+
+.main-title {
+  color: black;
+  font-size: 3em;
+  margin: 0;
+}
