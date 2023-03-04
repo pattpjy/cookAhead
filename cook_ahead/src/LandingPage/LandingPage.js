@@ -5,6 +5,7 @@ import "./LandingPage.css";
 const LandingPage = ({
   getRandomRecipes,
   randomRecipes,
+  setRecipes,
   savedRecipes,
   setSavedRecipes,
   savedBTN,
@@ -24,6 +25,7 @@ const LandingPage = ({
           cardTitle={recipe.title}
           cardImg={recipe.image}
           randomRecipes={randomRecipes}
+          setRecipes={setRecipes}
           savedRecipes={savedRecipes}
           setSavedRecipes={setSavedRecipes}
           savedBTN={savedBTN}

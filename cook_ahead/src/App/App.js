@@ -39,6 +39,7 @@ const App = () => {
             <LandingPage
               getRandomRecipes={getRandomRecipes}
               randomRecipes={recipes}
+              setRecipes={setRecipes}
               savedRecipes={savedRecipes}
               setSavedRecipes={setSavedRecipes}
               savedBTN={savedBTN}
