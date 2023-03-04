@@ -7,6 +7,8 @@ const LandingPage = ({
   randomRecipes,
   savedRecipes,
   setSavedRecipes,
+  savedBTN,
+  setSavedBTN,
 }) => {
   let navigate = useNavigate();
   const onClickHandler = () => {
@@ -24,6 +26,8 @@ const LandingPage = ({
           randomRecipes={randomRecipes}
           savedRecipes={savedRecipes}
           setSavedRecipes={setSavedRecipes}
+          savedBTN={savedBTN}
+          setSavedBTN={setSavedBTN}
           id={recipe.id}
           key={recipe.id}
         />

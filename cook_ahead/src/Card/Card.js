@@ -5,13 +5,20 @@ const Card = ({
   cardImg,
   randomRecipes,
   savedRecipes,
+  savedBTN,
   setSavedRecipes,
+  setSavedBTN,
   id,
 }) => {
   //function to add  saved recipes to state
   const addToWeeklyPlanner = (recID) => {
     const foundRecipe = randomRecipes.find((recipe) => recipe.id === recID);
-    if (foundRecipe) {
+
+    const checkDup = savedRecipes.find(
+      (recipe) => foundRecipe.id === recipe.id
+    );
+    // (recipe) => recipe.id !== foundRecipe.id
+    if (!checkDup) {
       console.log("Adding to weekly");
       setSavedRecipes((prevState) => [...prevState, foundRecipe]);
     } else {
@@ -20,11 +27,23 @@ const Card = ({
   };
   const onClickHandler = () => {
     addToWeeklyPlanner(id);
+    if (savedBTN === true) {
+      setSavedBTN(false);
+    } else {
+      setSavedBTN(true);
+    }
   };
   return (
     <div className="card">
       <h3>{cardTitle}</h3>
       <img src={cardImg} alt=""></img>
+      <i
+        className={
+          savedBTN
+            ? "fa-sharp fa-solid fa-bookmark"
+            : "fa-sharp fa-regular fa-bookmark"
+        }
+      ></i>
       <button onClick={onClickHandler}>Add to planner</button>
     </div>
   );
