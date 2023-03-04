@@ -25,7 +25,7 @@ const randomRecipesData = {
     },
     {
       id: 988562,
-      title: "coconut-broth-clams",
+      title: "Coconut Broth Clams",
       image:
         "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/186536.jpg?resize=600:*&output-format=auto&output-quality=auto",
       instructions:

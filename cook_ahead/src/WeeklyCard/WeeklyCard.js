@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeeklyCard.css";
+import parse from "html-react-parser";
 
 const WeeklyCard = ({
   id,
@@ -17,15 +18,14 @@ const WeeklyCard = ({
   return (
     <div className="weekly-card">
       <section>
-        <p>{title}</p>
-        <p>{instruction}</p>
+        <h3>{title}</h3>
+        <p>{parse(instruction)}</p>
       </section>
       <img src={imageURL} alt="title"></img>
 
-      <button
-        className="fa-light fa-xmark"
-        onClick={() => onDeleteIdea(id)}
-      ></button>
+      <button className="close-button" onClick={() => onDeleteIdea(id)}>
+        <i className="fa-regular fa-rectangle-xmark fa-2xl"></i>
+      </button>
     </div>
   );
 };

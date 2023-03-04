@@ -32,16 +32,23 @@ const Card = ({
   };
   return (
     <div className="card">
-      <h3>{cardTitle}</h3>
-      <img src={cardImg} alt=""></img>
-      <i
-        className={
-          checkDup
-            ? "fa-sharp fa-solid fa-bookmark"
-            : "fa-sharp fa-regular fa-bookmark"
-        }
-      ></i>
-      <button onClick={onClickHandler}>Add to planner</button>
+      <div className="card-header">
+        <p className="card-title">
+          <b>{cardTitle}</b>
+        </p>
+        <i
+          className={
+            checkDup
+              ? "fa-sharp fa-solid fa-bookmark fa-xl"
+              : "fa-sharp fa-regular fa-bookmark fa-xl"
+          }
+        ></i>
+      </div>
+      <img className="card-img" src={cardImg} alt=""></img>
+
+      <button className="add-btn" onClick={onClickHandler}>
+        Add to planner
+      </button>
     </div>
   );
 };

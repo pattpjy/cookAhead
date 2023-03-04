@@ -1,16 +1,25 @@
 .weekly-card {
   margin: 2em 0 2em 2em;
+  color: black;
+  background-color: rgb(227, 221, 218);
+  padding: 2em;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   border: 3px gray solid;
   border-radius: 2em;
-  width: 35em;
+  width: 50em;
 }
-
+.close-button {
+  background-color: rgb(227, 221, 218, 0);
+  border: 0;
+  padding: 0;
+  font-size: x-large;
+}
 img {
   object-fit: cover;
+  border-radius: 2em;
   padding: 2em;
   width: 10em;
   height: 8em;

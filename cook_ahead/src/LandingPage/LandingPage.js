@@ -39,13 +39,19 @@ const LandingPage = ({
   return (
     <div className="App">
       <div className="main-board">
-        <button onClick={onClickHandler}> Get Meal Ideas </button>
-        <button
-          className="view-weekly"
-          onClick={() => navigate("/weekly-plan")}
-        >
-          See My Weekly Meals
-        </button>
+        <div className="button-section">
+          <button className="get-ideas" onClick={onClickHandler}>
+            {" "}
+            Get Meal Ideas{" "}
+          </button>
+          <button
+            className="view-weekly"
+            onClick={() => navigate("/weekly-plan")}
+          >
+            See My Weekly Meals
+          </button>
+        </div>
+
         <div className="display-random">{displayCard()}</div>
       </div>
     </div>

@@ -31,7 +31,7 @@ const App = () => {
   };
 
   return (
-    <main>
+    <main className="main-app">
       <Navbar />
       <Routes>
         <Route
