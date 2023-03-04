@@ -4,6 +4,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import randomRecipesData from "../APICall/dummyData";
 import WeeklyPlan from "../WeeklyDisplay/WeeklyPlan";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Navbar from "../navbar/Navbar";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
@@ -31,6 +32,7 @@ const App = () => {
 
   return (
     <main>
+      <Navbar />
       <Routes>
         <Route
           className="App"
