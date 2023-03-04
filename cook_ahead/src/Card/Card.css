@@ -1,22 +1,44 @@
 .card {
   margin: 2em 0 2em 2em;
+  padding: 1em;
+  background-color: rgb(227, 221, 218);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px gray solid;
+  border: 0;
   border-radius: 2em;
   width: 12em;
 }
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
-img {
+.card-img {
   object-fit: cover;
-  padding-bottom: 2em;
+  padding: 0.5em;
   width: 10em;
   height: 8em;
 }
 
-h3 {
+.card-title {
   height: 2.5em;
   word-wrap: break-word;
   text-align: center;
+  margin-right: 0.5em;
+}
+
+.add-btn {
+  font-size: 0.8em;
+  font-weight: 900;
+  background-color: rgb(227, 221, 218 0.9);
+  margin: 1em 1em 0 1em;
+  width: 15em;
+  height: 5em;
+  border: 0;
+  border-radius: 1em;
+  box-shadow: #030303 0 10px 20px -10px;
+  line-height: 24px;
 }

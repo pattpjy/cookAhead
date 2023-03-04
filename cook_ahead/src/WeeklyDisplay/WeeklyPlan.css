@@ -1,4 +1,6 @@
 .weekly-display {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: rgb(227, 221, 218);
 }

@@ -1,11 +1,27 @@
 .invis-button {
   background-color: rgb(0, 0, 0, 0);
   border: none;
-  color: black;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .main-title {
-  color: black;
+  color: rgb(227, 221, 218);
   font-size: 3em;
   margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  height: 4em;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.fa-duotone.fa-house.fa-2xl {
+  padding: 0.5em;
 }
