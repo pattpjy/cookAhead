@@ -39,6 +39,13 @@ const Card = ({
     <div className="card">
       <h3>{cardTitle}</h3>
       <img src={cardImg} alt=""></img>
+      {/* <i
+        className={
+          some boolean 
+            ? "fa-sharp fa-solid fa-bookmark"
+            : "fa-sharp fa-regular fa-bookmark"
+        }
+      ></i> */}
 
       <button onClick={onClickHandler}>Add to planner</button>
     </div>
