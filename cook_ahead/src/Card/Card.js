@@ -30,3 +30,22 @@ const Card = ({
   );
 };
 export default Card;
+
+// const checkSavedRecipes = () => {
+//   // if id match id in saved array : prompt  you save it msg, if not add to the saved array
+// };
+
+// // const removeFromSavedActivities = (grabbedId) =>{
+// //   const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
+// //   setSavedActivities(unbookMarked);
+// //   }
+
+// const onClickHandler = (id) => {
+//   addToWeeklyPlanner(id);
+
+//   // if (savedBTN === true) {
+//   //   setSavedBTN(false);
+//   // } else {
+//   //   setSavedBTN(true);
+//   // }
+// };
