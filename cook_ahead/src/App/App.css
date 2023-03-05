@@ -2,6 +2,11 @@
   background-image: url("../resource/background.jpg");
   background-color: aquamarine;
 }
+.submitErrorMessage {
+  background-color: whitesmoke;
+  padding: 2em;
+  font-size: 1.5em;
+}
 @media screen and (max-width: 1024px) {
   /* Specific to this particular image */
   img.bg {

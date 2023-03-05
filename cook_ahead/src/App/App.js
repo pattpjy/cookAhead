@@ -6,17 +6,25 @@ import WeeklyPlan from "../WeeklyDisplay/WeeklyPlan";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Navbar from "../navbar/Navbar";
 import { getFetchRecipes } from "../APICall/APICall";
+import "./App.css";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [savedBTN, setSavedBTN] = useState(false);
+  const [hasError, setHasError] = useState("");
 
   const getRandomRecipes = async () => {
-    const randomData = await getFetchRecipes();
-    return setRecipes(randomData);
-  };
+    try {
+      // line 20 is for throw error to see styling
+      // throw new Error("TRY STYLING");
+      const randomData = await getFetchRecipes();
 
+      return setRecipes(randomData);
+    } catch (error) {
+      setHasError(error.message);
+    }
+  };
   // const getRandomRecipes = () => {
   //   return setRecipes(randomRecipesData.recipes);
   // };
@@ -24,6 +32,13 @@ const App = () => {
   return (
     <main className="main-app">
       <Navbar />
+      {hasError && (
+        <div className="submitErrorMessage">
+          <p>
+            <strong>{hasError}</strong>
+          </p>
+        </div>
+      )}
       <Routes>
         <Route
           className="App"
