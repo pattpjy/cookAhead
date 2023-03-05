@@ -108,9 +108,9 @@ See the [open issues](https://github.com/pattpjy/cookAhead/issues) for a full li
 
 ## Future Additions
 
-- [] As a user,I can create a list of ingredients
-- [] As a user,I can save my list of ingredients to a database
-- [] As a user,I can save my list of saved recipes to a database
+- [ ] As a user,I can create a list of ingredients
+- [ ] As a user,I can save my list of ingredients to a database
+- [ ] As a user,I can save my list of saved recipes to a database
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
