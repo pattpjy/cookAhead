@@ -31,4 +31,26 @@ describe("Landing Page", () => {
       cy.get(".view-weekly").click().url().should("include", "/weekly-plan");
     });
   });
+  describe("When API return an error", () => {
+    it("Should show error message", () => {
+      const errorAPI = {
+        error: "Something wrong with server",
+      };
+
+      cy.visit("http://localhost:3000")
+        .intercept(
+          "get",
+          "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=4",
+          {
+            statusCode: 404,
+            body: errorAPI,
+          }
+        )
+        .get(".get-ideas")
+        .click();
+      cy.get(".submitErrorMessage")
+        .find("p")
+        .should("contain", "Unable To Fetch Your Data. Try Later.");
+    });
+  });
 });

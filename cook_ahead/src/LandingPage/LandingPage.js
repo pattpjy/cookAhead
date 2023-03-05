@@ -8,6 +8,7 @@ const LandingPage = ({
   setRecipes,
   savedRecipes,
   setSavedRecipes,
+  hasError,
   savedBTN,
   setSavedBTN,
 }) => {

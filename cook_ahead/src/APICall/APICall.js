@@ -11,6 +11,9 @@ export const getFetchRecipes = async () => {
     "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=4",
     options
   );
+  if (!response.ok) {
+    throw new Error("Unable To Fetch Your Data. Try Later.");
+  }
   const body = await response.json();
   return body.recipes;
 };
