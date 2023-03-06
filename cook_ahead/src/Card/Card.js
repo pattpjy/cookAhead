@@ -4,11 +4,8 @@ const Card = ({
   cardTitle,
   cardImg,
   randomRecipes,
-  setRecipes,
   savedRecipes,
-  savedBTN,
   setSavedRecipes,
-  setSavedBTN,
   id,
 }) => {
   const foundRecipe = randomRecipes.find((recipe) => recipe.id === id);
@@ -25,10 +22,6 @@ const Card = ({
   };
   const onClickHandler = () => {
     addToWeeklyPlanner(id);
-    //   setSavedBTN(false);
-    // } else {
-    //   setSavedBTN(true);
-    // }
   };
   return (
     <div className="card">
@@ -53,22 +46,3 @@ const Card = ({
   );
 };
 export default Card;
-
-// const checkSavedRecipes = () => {
-//   // if id match id in saved array : prompt  you save it msg, if not add to the saved array
-// };
-
-// // const removeFromSavedActivities = (grabbedId) =>{
-// //   const unbookMarked = savedActivities.filter(activity => activity.id !== grabbedId);
-// //   setSavedActivities(unbookMarked);
-// //   }
-
-// const onClickHandler = (id) => {
-//   addToWeeklyPlanner(id);
-
-//   // if (savedBTN === true) {
-//   //   setSavedBTN(false);
-//   // } else {
-//   //   setSavedBTN(true);
-//   // }
-// };

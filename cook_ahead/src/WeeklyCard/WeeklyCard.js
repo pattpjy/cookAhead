@@ -22,7 +22,6 @@ const WeeklyCard = ({
         <p>{parse(instruction)}</p>
       </section>
       <img src={imageURL} alt="title"></img>
-
       <button className="close-button" onClick={() => onDeleteIdea(id)}>
         <i className="fa-regular fa-rectangle-xmark fa-2xl"></i>
       </button>

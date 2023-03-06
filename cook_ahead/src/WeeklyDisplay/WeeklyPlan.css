@@ -4,3 +4,7 @@
   align-items: center;
   color: rgb(227, 221, 218);
 }
+.display-saved {
+  width: 100%;
+  position: relative;
+}
