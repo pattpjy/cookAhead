@@ -36,8 +36,11 @@
 ## About The Project
 
 Coming up with meals ideas and making decisions for the family meal plans is hard. This is an application that helps user come up with a list of meal ideas. User can also manage the list.
+<img width="800" alt="Screen Shot 2023-03-06 at 1 14 07 AM" src="https://user-images.githubusercontent.com/111454351/223054427-6e0a8052-ca10-433d-a4cb-e0335601166d.png">
 
-Add vdo walk through
+<img width="800" alt="Screen Shot 2023-03-06 at 1 14 31 AM" src="https://user-images.githubusercontent.com/111454351/223054399-3bae9d67-c34a-47d5-b655-2dffe26682bd.png">
+
+<img width="800" alt="Screen Shot 2023-03-06 at 1 14 38 AM" src="https://user-images.githubusercontent.com/111454351/223054303-1fbe00b5-f491-454e-92e3-1aef1f85fb41.png">
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
