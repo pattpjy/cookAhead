@@ -47,15 +47,15 @@ Coming up with meals ideas and making decisions for the family meal plans is har
 
 ### Built With
 
-- [![Javascript][javascript.js]][javascript-url]
-- [![CSS][css]][css-url]
-- [![HTML][html]][html-url]
-- [![postman][postman]][postman-url]
-- [![API][api]][api-url]
-- [![html-react-parser][html-react-parser]][html-react-parser-url]
-- [![Git][git]][git-url]
-- [![GitHub][github]][github-url]
-- [![Vercel][vercel]][vercel-url]
+[![Javascript][javascript.js]][javascript-url]
+[![CSS][css]][css-url]
+[![HTML][html]][html-url]
+[![postman][postman]][postman-url]
+[![API][api]][api-url]
+[![html-react-parser][html-react-parser]][html-react-parser-url]
+[![Git][git]][git-url]
+[![GitHub][github]][github-url]
+[![Vercel][vercel]][vercel-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
