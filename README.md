@@ -51,6 +51,7 @@ Coming up with meals ideas and making decisions for the family meal plans is har
 [![CSS][css]][css-url]
 [![HTML][html]][html-url]
 [![postman][postman]][postman-url]
+[![cypress][cypress]][cypress-url]
 [![API][api]][api-url]
 [![html-react-parser][html-react-parser]][html-react-parser-url]
 [![Git][git]][git-url]
@@ -130,7 +131,8 @@ See the [open issues](https://github.com/pattpjy/cookAhead/issues) for a full li
 [javascript-url]: https://www.javascript.com/
 [postman]:https://img.shields.io/badge/Postman-4A4A55?style=for-the-badge&logo=postman&logoColor=FF3E00
 [postman-url]:https://www.postman.com/
-
+[cypress]:https://img.shields.io/badge/cypress-000000?style=for-the-badge&logo=postman&logoColor=000000
+[cypress-url]:https://www.cypress.io/
 [html-react-parser]:https://img.shields.io/badge/HTMLReactParser-4A4A55?style=for-the-badge&logo=HTMLReactParser&logoColor=FF3E00
 [html-react-parser-url]:https://www.npmjs.com/package/html-react-parser
 
